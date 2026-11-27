@@ -16,7 +16,7 @@ llm = ChatOpenAI( api_key=os.getenv("GROQ_API_KEY"),
 
 
 
-st.title("AskBuddy🤣 Ask Neeraj")
+st.title("AskBuddy🤣 by Neeraj")
 st.markdown("My QnA with langchain")
 query=st.chat_input("Ask Question ?")
 if "messages" not in st.session_state:
