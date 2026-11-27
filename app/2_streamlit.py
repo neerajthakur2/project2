@@ -16,7 +16,7 @@ llm = ChatOpenAI( api_key=os.getenv("GROQ_API_KEY"),
 
 
 
-st.title("AskBuddy🤣 AI QnA bot")
+st.title("AskBuddy🤣 Ask Neeraj")
 st.markdown("My QnA with langchain")
 query=st.chat_input("Ask Question ?")
 if "messages" not in st.session_state:
@@ -25,7 +25,7 @@ for message in st.session_state.messages:
     role=message["role"]
     content=message["content"]
     st.chat_message(role).markdown(content)
-
+#this is comment
 if query:
     st.session_state.messages.append({
         "role":"user",
@@ -36,6 +36,6 @@ if query:
     res=llm.invoke(query)
     st.chat_message("ai").markdown(res.content)
     st.session_state.messages.append({
-            "role":"ai",
+            "role":"Neeraj",
             "content":res.content
         })
